@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deepanshu's Task 2.1P</title>
+</head>
+<body>
+  <h1>Subscribe to DEV@Deakin</h1>
+  <form id="subscribeForm">
+    <input type="email" id="email" placeholder="Your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <script>
+    document.getElementById('subscribeForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+
+      try {
+        const response = await fetch('/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+
+        const data = await response.json();
+        alert(data.message || 'No response from server');
+      } catch (err) {
+        alert('Error sending request: ' + err.message);
+      }
+    });
+  </script>
+</body>
+</html>
