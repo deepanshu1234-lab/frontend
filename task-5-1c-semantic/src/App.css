@@ -1,0 +1,94 @@
+/* App.css - Custom styles for Task 5.1C */
+
+.App {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Custom form field styling to match wireframe layout */
+.ui.form .field > label {
+  font-weight: 500 !important;
+  color: #333 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Ensure proper spacing for form elements */
+.ui.form .field {
+  margin-bottom: 1rem !important;
+}
+
+/* Custom styling for radio buttons */
+.ui.form .inline.fields .field {
+  margin-right: 2rem !important;
+}
+
+/* Segment styling for consistent appearance */
+.ui.segment {
+  border-radius: 4px !important;
+  border: 1px solid #d4d4d5 !important;
+}
+
+/* Button styling to match wireframe */
+.ui.button {
+  font-weight: 500 !important;
+}
+
+.ui.grey.button {
+  background-color: #767676 !important;
+  color: white !important;
+}
+
+.ui.grey.button:hover {
+  background-color: #5a5a5a !important;
+}
+
+/* Textarea resize prevention */
+textarea {
+  resize: none !important;
+}
+
+/* Container max width for better layout */
+.ui.container {
+  max-width: 1000px !important;
+}
+
+/* Header styling */
+h1.ui.header {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  color: #333 !important;
+}
+
+/* Input field focus styles */
+.ui.input > input:focus,
+.ui.form textarea:focus {
+  border-color: #85b7d9 !important;
+  box-shadow: 0 0 0 1px #85b7d9 !important;
+}
+
+/* File input styling */
+input[type="file"] {
+  padding: 0.5rem !important;
+  border: 1px solid #d4d4d5 !important;
+  border-radius: 4px !important;
+  width: 100% !important;
+  background: white !important;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .ui.container {
+    padding: 1rem !important;
+  }
+  
+  /* Stack form labels on mobile */
+  .field-container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .field-label {
+    min-width: auto !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
